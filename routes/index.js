@@ -21,7 +21,7 @@ router.get("/movies", (req, res, next) => {
 
 router.get("/movie/:id", (req, res, next) => {
 
-    Pokemon.findById( req.params.id)
+    Movies.findById( req.params.id)
     .then((response) => {
       console.log(response);
       res.render("movie-details.hbs", {response})
