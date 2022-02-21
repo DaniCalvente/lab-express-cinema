@@ -7,9 +7,12 @@
 <h1>{{response.title}}</h1>
 <h2>Director: {{response.director}}</h2>
 <h3>Stars</h3>
-<h4>{{response.stars}}</h4>
-
+<ul>{{#each response.stars}}
+ <li>{{this}}</li>
+{{/each}}</ul>
 <p>{{response.description}}</p>
-<p>{{response.showtimes}}</p>
+{{#each response.showtimes}}
+{{this}} |
+{{/each}}
 
 </div>
